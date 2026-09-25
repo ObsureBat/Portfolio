@@ -52,12 +52,12 @@ export function ContactHero({ onOpenForm, isFormOpen, onHoverChange }: ContactHe
       </div>
 
       {/* 2. Enormous Editorial Headline: LET'S BUILD SOMETHING. */}
-      <div style={{ perspective: 1000 }} className="space-y-1 select-none overflow-visible">
+      <div style={{ perspective: 1000 }} className="space-y-1 select-none overflow-visible w-full">
         <motion.h2
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
-          className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-[clamp(2.8rem,4.2vw,5rem)] text-zinc-950 uppercase tracking-tight leading-[0.9]"
+          className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-[clamp(2.2rem,3.5vw,4rem)] text-zinc-950 uppercase tracking-tight leading-[0.9] overflow-visible"
         >
           <motion.div custom={0} variants={wordVariants} className="block overflow-hidden">
             LET’S
@@ -68,7 +68,7 @@ export function ContactHero({ onOpenForm, isFormOpen, onHoverChange }: ContactHe
           <motion.div
             custom={2}
             variants={wordVariants}
-            className="block overflow-visible pr-4 pb-1 text-transparent bg-clip-text bg-gradient-to-r from-zinc-950 via-zinc-800 to-indigo-700"
+            className="block overflow-visible pr-0 pb-1 text-transparent bg-clip-text bg-gradient-to-r from-zinc-950 via-zinc-800 to-indigo-700"
           >
             SOMETHING.
           </motion.div>

@@ -66,7 +66,7 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ ...smoothTransition, delay: 0.2 }}
-            className="lg:col-span-7 order-1"
+            className="lg:col-span-8 order-1 overflow-visible"
           >
             <ContactHero
               onOpenForm={handleToggleForm}
@@ -81,7 +81,7 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ ...smoothTransition, delay: 0.3 }}
-            className="lg:col-span-5 order-2"
+            className="lg:col-span-4 order-2"
           >
             <ContactSignalCore isCtaHovered={isCtaHovered} />
           </motion.div>
