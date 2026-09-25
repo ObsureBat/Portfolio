@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-syne: 'Syne', sans-serif;
+}
+
+html {
+  background-color: #F5F5F3;
+  color: #18181B;
+  scroll-behavior: auto !important; /* Lenis handles smooth scrolling */
+}
+
+/* Lenis smooth scroll essential styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Hide default scrollbars for sleek aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F5F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4D4D8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A1A1AA;
+}
+
+::selection {
+  background-color: #18181B;
+  color: #FFFFFF;
+}
+
+/* Professional editorial title shimmer animation */
+@keyframes titleShimmer {
+  0% {
+    background-position: 180% 0;
+  }
+  100% {
+    background-position: -180% 0;
+  }
+}
+
+.animate-title-shimmer {
+  background: linear-gradient(
+    115deg,
+    #18181b 0%,
+    #18181b 25%,
+    #3f3f46 42%,
+    #d4d4d8 50%,
+    #3f3f46 58%,
+    #18181b 75%,
+    #18181b 100%
+  );
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titleShimmer 7.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Connective Wall ambient flowing shimmer animation */
+@keyframes connectiveWallFlow {
+  0% {
+    background-position: 0px 0;
+  }
+  100% {
+    background-position: 128px 0;
+  }
+}
+
+.animate-connective-wall {
+  animation: connectiveWallFlow 10s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-connective-wall {
+    animation: none !important;
+  }
+}
+
+
