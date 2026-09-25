@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
   transpilePackages: ['three', '@react-three/fiber', '@react-three/drei', '@react-three/postprocessing'],
   webpack: (config) => {
     config.module.rules.push({
@@ -8,6 +9,9 @@ const nextConfig = {
       type: 'asset/source',
     });
     return config;
+  },
+  images: {
+    unoptimized: true,
   },
 };
 
